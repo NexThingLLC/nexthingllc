@@ -344,30 +344,33 @@ blockquote.turing-quote cite {
   align-items: center;
 }
 
-.about-logo-wrap {
+.about-photo-wrap {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about-logo-wrap::before {
+.about-photo-wrap::before {
   content: '';
   position: absolute;
-  inset: -20px;
+  inset: -16px;
   border-radius: 50%;
   background: conic-gradient(from 0deg, var(--cyan), var(--blue), var(--purple), var(--cyan));
-  opacity: 0.15;
-  filter: blur(20px);
+  opacity: 0.2;
+  filter: blur(22px);
   animation: spin 8s linear infinite;
 }
 
-.about-logo-wrap img {
+.about-photo-wrap img {
   position: relative;
-  width: 200px;
-  height: auto;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border);
   z-index: 1;
 }
 
@@ -521,6 +524,175 @@ blockquote.turing-quote cite {
   line-height: 1.65;
 }
 
+/* Primary (lead) expertise: Agentic AI + Automation */
+.expertise-primary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.expertise-card-lead {
+  text-align: left;
+  padding: 2.5rem 2rem;
+  border-color: rgba(0, 196, 255, 0.35);
+}
+
+.expertise-card-lead .expertise-icon {
+  margin: 0 0 1.5rem;
+  width: 60px;
+  height: 60px;
+}
+
+.expertise-card-lead h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.expertise-card-lead p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* Supporting: the engineering foundation */
+.expertise-support-label {
+  margin-top: 4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.expertise-support-text {
+  margin-top: 0.75rem;
+}
+
+.expertise-support {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.expertise-card-support {
+  padding: 1.5rem 1.25rem;
+  background: var(--surface);
+}
+
+.expertise-card-support .expertise-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1rem;
+}
+
+.expertise-card-support .expertise-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.expertise-card-support h3 {
+  font-size: 0.9rem;
+}
+
+/* =============================================
+   THE OFFER
+   ============================================= */
+#offer {
+  background: var(--navy);
+}
+
+.offer-card {
+  margin-top: 3rem;
+  max-width: 720px;
+  background: var(--surface);
+  border: 1px solid rgba(0, 196, 255, 0.35);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 48px rgba(0, 196, 255, 0.08);
+}
+
+.offer-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.offer-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.offer-tagline {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.offer-price {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.offer-price-amount {
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.offer-price-term {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+}
+
+.offer-desc {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.offer-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.offer-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.85rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.offer-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 14px;
+  height: 8px;
+  border-left: 2px solid var(--cyan);
+  border-bottom: 2px solid var(--cyan);
+  transform: rotate(-45deg);
+}
+
+.offer-cta {
+  width: 100%;
+  text-align: center;
+}
+
 /* =============================================
    CONTACT
    ============================================= */
@@ -559,79 +731,38 @@ blockquote.turing-quote cite {
   flex-shrink: 0;
 }
 
-.contact-form {
+.contact-cta-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 196, 255, 0.35);
   border-radius: 16px;
   padding: 2.5rem;
+  box-shadow: 0 12px 48px rgba(0, 196, 255, 0.08);
 }
 
-.form-group {
-  margin-bottom: 1.25rem;
+.contact-cta-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
 }
 
-.form-group label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
+.contact-cta-card > p {
   color: var(--text-secondary);
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  color: var(--text-primary);
-  font-family: var(--font-main);
-  font-size: 0.95rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  outline: none;
+.contact-cta-note {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--cyan);
-  box-shadow: 0 0 0 3px rgba(0, 196, 255, 0.1);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 130px;
-}
-
-.form-message {
-  display: none;
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.form-message.success {
-  display: block;
-  border: 1px solid rgba(0, 196, 255, 0.4);
-  background: rgba(0, 196, 255, 0.08);
+.contact-cta-note a {
   color: var(--cyan);
 }
 
-.form-message.error {
-  display: block;
-  border: 1px solid rgba(255, 107, 107, 0.4);
-  background: rgba(255, 107, 107, 0.08);
-  color: #ff6b6b;
-}
-
-.btn-primary:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
+.contact-cta-note a:hover {
+  text-decoration: underline;
 }
 
 /* =============================================
@@ -721,7 +852,26 @@ footer {
   }
 
   .about-visual {
-    display: none;
+    order: -1;
+  }
+
+  .about-photo-wrap {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-photo-wrap img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .offer-card,
+  .contact-cta-card {
+    padding: 1.75rem;
+  }
+
+  .offer-price {
+    text-align: left;
   }
 
   .nav-links {
