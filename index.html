@@ -15,10 +15,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -52,10 +49,10 @@
   <section id="hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-content">
-      <span class="hero-eyebrow">Agentic AI &amp; Automation</span>
+      <span class="hero-eyebrow">// agentic ai + automation</span>
       <h1 class="hero-headline">
         Put AI Agents<br />
-        <span class="gradient-text">to Work</span>
+        <span class="accent">to Work</span><span class="cursor" aria-hidden="true"></span>
       </h1>
       <p class="hero-subline">
         I help businesses automate the operational busywork that drains their
@@ -63,21 +60,28 @@
         two decades of cloud, DevOps, and reliability engineering.
       </p>
       <a href="https://calendly.com/bo-nexthing/30min" class="btn-primary" target="_blank" rel="noopener">Book a Call</a>
+      <div class="hero-meta" aria-label="Disciplines">
+        <span>Agentic AI</span><span>Automation</span><span>Cloud</span><span>SRE</span><span>DevOps</span>
+      </div>
     </div>
-    <div class="hero-scroll-hint" aria-hidden="true">Scroll</div>
   </section>
 
   <!-- ================================================
        ABOUT US
        ================================================ -->
   <section id="about">
+    <div class="section-bar" aria-hidden="true">
+      <span class="bar-tag">// 01</span>
+      <span class="bar-name">About</span>
+      <span class="bar-ticks"></span>
+      <span class="bar-path">nexthing.tech/#about</span>
+    </div>
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-text">
-          <p class="section-label">About</p>
           <h2 class="section-heading fade-up">
             Hi, I'm Bo Smith,<br />
-            <span class="gradient-text">Founder of NexThing</span>
+            <span class="accent">Founder of NexThing</span>
           </h2>
           <div class="section-divider"></div>
           <p class="fade-up">
@@ -93,14 +97,15 @@
           </p>
           <blockquote class="turing-quote fade-up">
             <p>"We can only see a short distance ahead, but we can see plenty there that needs to be done."</p>
-            <cite>- Alan Turing</cite>
+            <cite>Alan Turing</cite>
           </blockquote>
         </div>
         <div class="about-visual">
-          <div class="about-photo-wrap">
+          <figure class="about-photo panel">
             <!-- TODO: replace founder.jpg with Bo's headshot (square crop recommended) -->
             <img src="founder.jpg" alt="Bo Smith, founder of NexThing, LLC." />
-          </div>
+            <figcaption><span>Bo Smith</span><span>Founder</span></figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -110,11 +115,16 @@
        OUR PROMISE
        ================================================ -->
   <section id="promise">
+    <div class="section-bar" aria-hidden="true">
+      <span class="bar-tag">// 02</span>
+      <span class="bar-name">Our Promise</span>
+      <span class="bar-ticks"></span>
+      <span class="bar-path">nexthing.tech/#promise</span>
+    </div>
     <div class="section-inner">
-      <p class="section-label">Our Promise</p>
       <h2 class="section-heading fade-up">
         What You Can<br />
-        <span class="gradient-text">Always Count On</span>
+        <span class="accent">Always Count On</span>
       </h2>
       <div class="section-divider"></div>
       <p class="section-subtext fade-up">
@@ -123,7 +133,7 @@
       </p>
       <div class="promise-grid">
 
-        <div class="promise-card fade-up">
+        <div class="promise-card panel fade-up">
           <div class="promise-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <!-- Eye / Clarity -->
@@ -135,7 +145,7 @@
           <p>No jargon, no ambiguity. We communicate honestly and directly so you always know where things stand.</p>
         </div>
 
-        <div class="promise-card fade-up">
+        <div class="promise-card panel fade-up">
           <div class="promise-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <!-- Shield / Accountability -->
@@ -146,7 +156,7 @@
           <p>We own our work and our outcomes. If something needs to be fixed, we fix it - without excuses.</p>
         </div>
 
-        <div class="promise-card fade-up">
+        <div class="promise-card panel fade-up">
           <div class="promise-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <!-- Target / Results -->
@@ -159,7 +169,7 @@
           <p>We measure success by your outcomes, not our hours. Real progress is the only metric that matters.</p>
         </div>
 
-        <div class="promise-card fade-up">
+        <div class="promise-card panel fade-up">
           <div class="promise-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <!-- Handshake / Partnership - using link/chain icon -->
@@ -179,11 +189,16 @@
        OUR EXPERTISE
        ================================================ -->
   <section id="expertise">
+    <div class="section-bar" aria-hidden="true">
+      <span class="bar-tag">// 03</span>
+      <span class="bar-name">Expertise</span>
+      <span class="bar-ticks"></span>
+      <span class="bar-path">nexthing.tech/#expertise</span>
+    </div>
     <div class="section-inner">
-      <p class="section-label">Expertise</p>
       <h2 class="section-heading fade-up">
         The Specialty:<br />
-        <span class="gradient-text">AI That Does the Work</span>
+        <span class="accent">AI That Does the Work</span>
       </h2>
       <div class="section-divider"></div>
       <p class="section-subtext fade-up">
@@ -193,7 +208,7 @@
       </p>
       <div class="expertise-primary">
 
-        <div class="expertise-card expertise-card-lead fade-up">
+        <div class="expertise-card expertise-card-lead panel fade-up">
           <div class="expertise-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <!-- Agentic AI / CPU/chip -->
@@ -208,7 +223,7 @@
           processes, I build agents that take work off your team's plate and run reliably.</p>
         </div>
 
-        <div class="expertise-card expertise-card-lead fade-up">
+        <div class="expertise-card expertise-card-lead panel fade-up">
           <div class="expertise-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <!-- Automation / Zap -->
@@ -275,11 +290,16 @@
        THE OFFER
        ================================================ -->
   <section id="offer">
+    <div class="section-bar" aria-hidden="true">
+      <span class="bar-tag">// 04</span>
+      <span class="bar-name">Start Here</span>
+      <span class="bar-ticks"></span>
+      <span class="bar-path">nexthing.tech/#offer</span>
+    </div>
     <div class="section-inner">
-      <p class="section-label">Start Here</p>
       <h2 class="section-heading fade-up">
         The AI<br />
-        <span class="gradient-text">Opportunity Assessment</span>
+        <span class="accent">Opportunity Assessment</span>
       </h2>
       <div class="section-divider"></div>
       <p class="section-subtext fade-up">
@@ -287,7 +307,7 @@
         engagement that turns the question into a concrete plan.
       </p>
 
-      <div class="offer-card fade-up">
+      <div class="offer-card panel fade-up">
         <div class="offer-card-head">
           <div>
             <h3 class="offer-name">AI Opportunity Assessment</h3>
@@ -298,6 +318,7 @@
             <span class="offer-price-term">2-week engagement</span>
           </div>
         </div>
+        <div class="offer-body">
         <p class="offer-desc">
           A fixed-scope assessment that pinpoints where AI agents and automation will
           remove the most operational toil from your business - and what to build first.
@@ -308,7 +329,8 @@
           <li>Practical cost and effort estimates so you can budget with confidence</li>
           <li>A working session to walk through the findings with your team</li>
         </ul>
-        <a href="https://calendly.com/bo-nexthing/30min" class="btn-primary offer-cta" target="_blank" rel="noopener">Book a Call</a>
+        <a href="https://calendly.com/bo-nexthing/30min" class="btn-primary btn-block" target="_blank" rel="noopener">Book a Call</a>
+        </div>
       </div>
     </div>
   </section>
@@ -317,13 +339,18 @@
        CONTACT US
        ================================================ -->
   <section id="contact">
+    <div class="section-bar" aria-hidden="true">
+      <span class="bar-tag">// 05</span>
+      <span class="bar-name">Get Started</span>
+      <span class="bar-ticks"></span>
+      <span class="bar-path">nexthing.tech/#contact</span>
+    </div>
     <div class="section-inner">
       <div class="contact-grid">
         <div class="contact-info">
-          <p class="section-label">Get Started</p>
           <h2 class="section-heading fade-up">
             Let's Build<br />
-            <span class="gradient-text">Something Together</span>
+            <span class="accent">Something Together</span>
           </h2>
           <div class="section-divider"></div>
           <p class="section-subtext fade-up">
@@ -340,13 +367,13 @@
           </div>
         </div>
 
-        <div class="contact-cta-card fade-up">
+        <div class="contact-cta-card panel fade-up">
           <h3>Book a 30-minute call</h3>
           <p>
             No pressure and no sales script - just a straight conversation about your
             goals and whether NexThing is the right fit.
           </p>
-          <a href="https://calendly.com/bo-nexthing/30min" class="btn-primary" target="_blank" rel="noopener" style="width: 100%; text-align: center;">Book a Call</a>
+          <a href="https://calendly.com/bo-nexthing/30min" class="btn-primary btn-block" target="_blank" rel="noopener">Book a Call</a>
           <p class="contact-cta-note">Prefer email? Reach me at <a href="mailto:bo@nexthing.tech">bo@nexthing.tech</a></p>
         </div>
       </div>
@@ -366,7 +393,7 @@
         <li><a href="#offer">The Assessment</a></li>
         <li><a href="#contact">Book a Call</a></li>
       </ul>
-      <p class="footer-copy">&copy; 2026 NexThing, LLC. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 NexThing, LLC // All rights reserved</p>
     </div>
   </footer>
 

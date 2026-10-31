@@ -103,13 +103,17 @@ site/
 
 ## Design Approach
 
-- **Dark theme** throughout (deep navy background)
-- **Gradient accents** using cyan-to-purple per the logo palette
-- **Glassmorphism** subtle frosted-glass cards
-- **Sharp geometry** with subtle angled/diagonal section dividers
-- **Typography**: System font stack or Google Font (e.g., Inter or Space Grotesk) for clean modern feel
-- Smooth scroll between sections
-- Scroll-triggered fade-in animations (CSS + IntersectionObserver)
+Revised 2026-10-31 (light theme) to move away from a "generic AI" look toward a technical, engineering-drawing style.
+
+- **Quiet base**: light off-white backgrounds (`#F6F6F3` / `#EDEEEA` alternating), white panels, dark ink text (`#12151C`); no glows, no radial gradients, no gradient text
+- **One brand color per section**, used as solid color only: About = cyan (`#0080B8`), Promise = blue (`#2F63E0`), Expertise = violet (`#6A2FCF`), Assessment = cyan, Contact = blue. These are deepened versions of the logo colors so they keep readable contrast on the light background.
+- **Section header bars**: full-width bar with a colored `// 0N` tag, section name, ruler tick marks, and anchor path
+- **Technical lines**: 1px hairlines, corner-bracket panels, square corners, divider with a terminal node, dashed list rules
+- **Slashes**: `//` used for nav prefixes, card indexes, list bullets, separators, and the button suffix
+- **Typography**: Archivo (headings/body) + JetBrains Mono (labels, prices, metadata)
+- **Hero**: faint 48px engineering grid, left-aligned, block cursor after the headline
+- Scroll-triggered fade-in kept (respects `prefers-reduced-motion`)
+- Tailwind CDN removed (no utility classes were in use)
 
 ---
 
