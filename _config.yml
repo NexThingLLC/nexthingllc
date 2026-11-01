@@ -1,0 +1,5 @@
+# GitHub Pages (Jekyll) build settings.
+# Keep internal working documents off the public website.
+exclude:
+  - docs/
+  - CLAUDE.md

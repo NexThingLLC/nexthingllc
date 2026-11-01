@@ -88,7 +88,8 @@ section {
 #promise   { --sec: var(--blue);   }
 #expertise { --sec: var(--violet); background: var(--bg-2); }
 #offer     { --sec: var(--cyan);   }
-#contact   { --sec: var(--blue);   background: var(--bg-2); }
+#faq       { --sec: var(--violet); background: var(--bg-2); }
+#contact   { --sec: var(--blue);   }
 
 .section-inner {
   max-width: 1100px;
@@ -692,6 +693,40 @@ blockquote.turing-quote cite::before {
 .expertise-card-support .expertise-icon svg {
   width: 18px;
   height: 18px;
+}
+
+/* =============================================
+   FAQ
+   ============================================= */
+.faq-list {
+  margin-top: 3rem;
+  max-width: 860px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.faq-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px dashed var(--line-strong);
+}
+
+.faq-item h3 {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item h3::before {
+  content: '//';
+  font-family: var(--font-mono);
+  color: var(--sec);
+}
+
+.faq-item p {
+  color: var(--text-dim);
+  line-height: 1.75;
+  padding-left: 2rem;
 }
 
 /* =============================================
