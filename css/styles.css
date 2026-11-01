@@ -656,7 +656,7 @@ blockquote.turing-quote cite::before {
 
 .expertise-support {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 2rem;
   border: 1px solid var(--line);
 }
@@ -667,10 +667,15 @@ blockquote.turing-quote cite::before {
   background: transparent;
   border: none;
   border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-.expertise-card-support:last-child {
+.expertise-card-support:nth-child(3n) {
   border-right: none;
+}
+
+.expertise-card-support:nth-last-child(-n+3) {
+  border-bottom: none;
 }
 
 .expertise-card-support::before,
@@ -913,7 +918,12 @@ footer {
    RESPONSIVE
    ============================================= */
 @media (max-width: 900px) {
-  .expertise-card-support {
+  .expertise-support {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-card-support,
+  .expertise-card-support:nth-last-child(-n+3) {
     border-right: none;
     border-bottom: 1px solid var(--line);
   }
