@@ -112,6 +112,7 @@ Revised 2026-10-31 (light theme) to move away from a "generic AI" look toward a 
 - **Slashes**: `//` used for nav prefixes, card indexes, list bullets, separators, and the button suffix
 - **Typography**: Archivo (headings/body) + JetBrains Mono (labels, prices, metadata)
 - **Hero**: faint 48px engineering grid, left-aligned, block cursor after the headline
+- **Hero pipeline visual** (added 2026-11-06): animated diagram on the right (ingest -> route -> AI agent or rules -> act, with an observe loop) and a rolling run log. Rules get about 65% of traffic to reinforce "More than just AI". Hidden below 980px; static when reduced motion is on.
 - Scroll-triggered fade-in kept (respects `prefers-reduced-motion`)
 - Tailwind CDN removed (no utility classes were in use)
 

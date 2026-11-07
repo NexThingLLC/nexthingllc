@@ -171,6 +171,8 @@
   <section id="hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-content">
+      <div class="hero-grid">
+      <div class="hero-text">
       <span class="hero-eyebrow">// automation + ai + infrastructure</span>
       <h1 class="hero-headline">
         More Than<br />
@@ -183,6 +185,56 @@
         means it gets built where your systems actually live.
       </p>
       <a href="https://calendly.com/bo-nexthing/30min" class="btn-primary" target="_blank" rel="noopener">Book a Call</a>
+      </div>
+
+      <!-- Animated automation pipeline: work is classified, then routed to an
+           AI agent or to deterministic rules, then acted on and observed -->
+      <div class="hero-visual panel" aria-hidden="true">
+        <div class="pipe-head">
+          <span>// pipeline.live</span>
+          <span><span class="pipe-dot"></span><span id="pipe-count">0</span> runs</span>
+        </div>
+        <svg class="pipe-svg" viewBox="0 48 480 292">
+          <!-- observe loop -->
+          <path class="pipe-loop" d="M436 192 V316 H44 V192" />
+          <text class="pipe-note" x="240" y="332" text-anchor="middle">// observe + improve</text>
+
+          <!-- edges -->
+          <path class="pipe-edge" id="e-in"  d="M88 170 H130" />
+          <path class="pipe-edge" id="e-a1"  d="M218 170 H239 V80 H260" />
+          <path class="pipe-edge" id="e-b1"  d="M218 170 H239 V260 H260" />
+          <path class="pipe-edge" id="e-a2"  d="M348 80 H370 V170 H392" />
+          <path class="pipe-edge" id="e-b2"  d="M348 260 H370 V170 H392" />
+          <text class="pipe-note" x="244" y="122">ai</text>
+          <text class="pipe-note" x="244" y="226">rules</text>
+
+          <!-- nodes -->
+          <g class="pipe-node" id="n-in" transform="translate(0 148)">
+            <rect width="88" height="44" /><text class="pipe-label" x="10" y="19">INGEST</text><text class="pipe-sub" x="10" y="34">events</text>
+          </g>
+          <g class="pipe-node" id="n-route" transform="translate(130 148)">
+            <rect width="88" height="44" /><text class="pipe-label" x="10" y="19">ROUTE</text><text class="pipe-sub" x="10" y="34">classify</text>
+          </g>
+          <g class="pipe-node node-agent" id="n-agent" transform="translate(260 58)">
+            <rect width="88" height="44" /><text class="pipe-label" x="10" y="19">AGENT</text><text class="pipe-sub" x="10" y="34">judgment</text>
+          </g>
+          <g class="pipe-node node-rules" id="n-rules" transform="translate(260 238)">
+            <rect width="88" height="44" /><text class="pipe-label" x="10" y="19">RULES</text><text class="pipe-sub" x="10" y="34">deterministic</text>
+          </g>
+          <g class="pipe-node" id="n-ship" transform="translate(392 148)">
+            <rect width="88" height="44" /><text class="pipe-label" x="10" y="19">ACT</text><text class="pipe-sub" x="10" y="34">execute</text>
+          </g>
+
+          <g id="pipe-packets"></g>
+        </svg>
+        <ol class="pipe-log" id="pipe-log">
+          <li><span class="log-ok">ok</span> invoice.received -&gt; rules 41ms</li>
+          <li><span class="log-ok">ok</span> ticket.triaged -&gt; agent 1.2s</li>
+          <li><span class="log-ok">ok</span> node.disk_full -&gt; rules 63ms</li>
+        </ol>
+      </div>
+      </div>
+
       <div class="hero-meta" aria-label="Disciplines">
         <span>Automation</span><span>Agentic AI</span><span>Hybrid Cloud</span><span>Kubernetes</span><span>SRE</span><span>DevOps</span>
       </div>
