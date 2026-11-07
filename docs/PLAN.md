@@ -121,8 +121,9 @@ Revised 2026-10-31 (light theme) to move away from a "generic AI" look toward a 
 
 - **Company voice:** "NexThing" as the subject for services, the offer, and commitments
   ("NexThing builds...", "Every NexThing engagement..."). Do not use "we" to imply a team.
-- **Founder voice:** "I" only where Bo appears in person (About, Book a Call card).
-- **Founder-led framing:** clients work directly with the architect who designs and builds
+- **No first person:** no "I" on the site; NexThing is the subject everywhere, including
+  About and Book a Call (changed 2026-11-06). About uses a spec-sheet panel, not a headshot.
+- **Architect-led framing:** clients work directly with the architect who designs and builds
   the solution. Never describe the business as a one-person shop, and never imply a team
   that does not exist.
 - **Allowed:** "Our Promise" (firm possessive) and the inclusive "we" meaning Bo plus the

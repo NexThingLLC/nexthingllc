@@ -479,32 +479,48 @@ blockquote.turing-quote cite::before {
   justify-content: center;
 }
 
-.about-photo {
-  padding: 1rem;
+.about-spec {
   width: 100%;
-  max-width: 320px;
-}
-
-.about-photo img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border: 1px solid var(--line);
-}
-
-.about-photo figcaption {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.85rem;
+  max-width: 360px;
+  padding: 1.25rem 1.5rem;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-faint);
+  font-size: 0.8rem;
 }
 
-.about-photo figcaption span:first-child {
+.about-spec-head {
   color: var(--sec);
+  letter-spacing: 0.06em;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-spec dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: 0;
+}
+
+.about-spec dt,
+.about-spec dd {
+  margin: 0;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.5;
+}
+
+.about-spec dt {
+  color: var(--text-faint);
+  padding-right: 1.25rem;
+}
+
+.about-spec dd {
+  color: var(--text);
+}
+
+.about-spec dt:last-of-type,
+.about-spec dd:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 /* =============================================
@@ -1004,12 +1020,11 @@ footer {
   }
 
   .about-visual {
-    order: -1;
     justify-content: flex-start;
   }
 
-  .about-photo {
-    max-width: 240px;
+  .about-spec {
+    max-width: none;
   }
 
   .offer-card-head,
