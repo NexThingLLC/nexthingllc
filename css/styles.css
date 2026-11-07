@@ -128,16 +128,72 @@ section {
   border-right: 1px solid var(--line);
 }
 
-/* ruler ticks */
-.section-bar .bar-ticks {
+/* pipeline track: one node per section, current stage highlighted */
+.section-bar .bar-pipe {
+  --pad: 1.5rem;
+  --node: 9px;
+  position: relative;
   flex: 1;
-  background-image:
-    repeating-linear-gradient(90deg, var(--line-strong) 0 1px, transparent 1px 8px),
-    repeating-linear-gradient(90deg, var(--sec) 0 1px, transparent 1px 64px);
-  background-size: 100% 6px, 100% 12px;
-  background-position: left bottom, left bottom;
-  background-repeat: no-repeat;
-  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--pad);
+}
+
+.section-bar .bar-pipe::before,
+.section-bar .bar-pipe::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(var(--pad) + var(--node) / 2);
+  height: 1px;
+}
+
+.section-bar .bar-pipe::before {
+  right: calc(var(--pad) + var(--node) / 2);
+  background: var(--line-strong);
+}
+
+/* completed portion of the line */
+.section-bar .bar-pipe::after {
+  width: calc((100% - 2 * var(--pad) - var(--node)) * (var(--step) - 1) / 5);
+  background: var(--sec);
+}
+
+.section-bar .bar-pipe i {
+  position: relative;
+  z-index: 1;
+  width: var(--node);
+  height: var(--node);
+  box-sizing: border-box;
+}
+
+.section-bar .bar-pipe .done {
+  background: color-mix(in srgb, var(--sec) 45%, var(--panel));
+}
+
+.section-bar .bar-pipe .now {
+  background: var(--sec);
+  transform: rotate(45deg) scale(1.15);
+}
+
+/* expanding ring marks the current stage */
+.section-bar .bar-pipe .now::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--sec);
+  animation: stage-pulse 2s ease-out infinite;
+}
+
+@keyframes stage-pulse {
+  from { transform: scale(1); opacity: 0.9; }
+  to   { transform: scale(2.6); opacity: 0; }
+}
+
+.section-bar .bar-pipe .next {
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
 }
 
 .section-bar .bar-path {
@@ -1091,6 +1147,7 @@ footer {
   .fade-up { opacity: 1; transform: none; transition: none; }
   .hero-headline .cursor { animation: none; }
   .pipe-dot, .pipe-loop { animation: none; }
+  .section-bar .bar-pipe .now::after { animation: none; display: none; }
 }
 
 /* =============================================
